@@ -1,0 +1,50 @@
+
+
+
+div.lever {
+    margin: 35px;
+    position: relative;
+    width: 50px;
+    height: 100px;
+    background-color: white;
+    border-radius: 35%;
+    transition: 2s;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+button.button {
+    display: block;
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    bottom: auto;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background-color: #4a4a4a;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+button.button.active {
+    top: calc(100% - 35px - 5px);
+}
+div.alarm {
+    position: absolute;
+    border-radius: 50%;
+  
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    background-image: radial-gradient(gray, red, black)
+}
+div.leverobj {
+    position: relative;
+    
+}
+div.alarm.active {
+    background-image: radial-gradient(yellow, white);
+}
