@@ -18,6 +18,7 @@ class App extends Component {
       seconds: 0,
     },
   }
+
   handleStartClick = () => {
     this.setState({
       display: 'menu',
@@ -45,7 +46,7 @@ class App extends Component {
         complexity: param,
 
       })
-
+    // console.log('wywołano setParameters')
   }
   restart = () => {
     this.setState({
@@ -55,7 +56,16 @@ class App extends Component {
   endGame = () => {
     this.setState({
       display: 'end',
+
     })
+  }
+  resetParameters = () => {
+    this.setState({
+      size: 16,
+      chaos: 150,
+      complexity: 3,
+    })
+
   }
   updateTime = () => {
     const { time } = this.state;
@@ -78,7 +88,9 @@ class App extends Component {
     time.seconds = 0;
     this.setState({ time });
   }
+
   render() {
+
     const display =
       this.state.display === 'game' ? <Game endF={this.endGame} chaos={this.state.chaos} size={this.state.size} complexity={this.state.complexity} time={this.state.time} updateTime={this.updateTime} /> :
         this.state.display === 'menu' ? <Menu setter={this.setParameters} init={this.setPlay} /> :
@@ -87,10 +99,12 @@ class App extends Component {
             complexity={this.state.complexity} restart={this.restart}
             time={this.state.time}
             resetTime={this.resetTime}
+            resetParameters={this.resetParameters}
           /> :
             <StartWindow click={this.handleStartClick} />;
     return (
       <div className="application">
+
         {display}
       </div>
     );

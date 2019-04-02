@@ -19,6 +19,7 @@ const EndWindow = (props) => {
             <button className="return" onClick={() => {
                 props.restart();
                 props.resetTime();
+                props.resetParameters();
             }}>Try again</button>
         </div>
     );

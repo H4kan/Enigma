@@ -38,9 +38,12 @@ div.timer p {
 }
 p.objective {
     position: absolute;
-    font-size: 20px;
-    left: 50%;
-    top: 8%;
-    transform: translate(-50%, -50%);
+    font-size: 17px;
+    right: 4%;
+    top: 13%;
+    /* transform: translate(-50%, -50%); */
     font-weight: 600;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial;
 }

@@ -85,7 +85,7 @@ class Game extends Component {
 
             <div className="App">
                 <Timer time={this.props.time} />
-                <p className="objective">Activate all the levers</p>
+                <p className="objective">Tip: Activate all the levers</p>
                 <ListLevers
                     changeState={this.changeState}
                     activeList={this.state.activeList}
