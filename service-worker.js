@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Enigma/precache-manifest.cbecc8c71477d742ce4d1994965b01e6.js"
+  "/Enigma/precache-manifest.1fc1dbada86a67154445512f4555a647.js"
 );
 
 workbox.clientsClaim();
